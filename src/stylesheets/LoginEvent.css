@@ -1,0 +1,48 @@
+.LoginEventCard {
+  
+  width: 400px;
+}
+
+.userInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25px 25px 1fr;
+  grid-template-areas:
+    "username usernameBanned"
+    "ip ipBanned"
+    "extraContainer extraContainer";
+}
+
+.username {
+  grid-area: username;
+}
+
+.usernameBanned {
+  grid-area: usernameBanned;
+}
+
+.ip {
+  grid-area: ip;
+}
+
+.ipBanned {
+  grid-area: ipBanned;
+}
+
+.extraContainer {
+  grid-area: extraContainer;
+}
+
+.toggleDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hideDetails {
+  display: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
