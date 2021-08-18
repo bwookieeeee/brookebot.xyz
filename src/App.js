@@ -1,4 +1,4 @@
-import './App.css';
+import './stylesheets/App.css';
 import LoginEvent from './components/LoginEvent';
 
 const testUser = {
@@ -18,6 +18,7 @@ const testUser = {
 function App() {
   return (
     <div className="App">
+      
       <LoginEvent login={testUser}/>
     </div>
   );

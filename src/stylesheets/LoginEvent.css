@@ -1,9 +1,17 @@
 .LoginEventCard {
-  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   width: 400px;
+  box-shadow: 0 0 5px var(--mid-bg);
+  background-color: var(--dark-bg);
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .userInfo {
+  background-color: var(--mid-bg);
+  color: var(--dark-text);
+  padding: 2px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 25px 25px 1fr;
@@ -11,6 +19,12 @@
     "username usernameBanned"
     "ip ipBanned"
     "extraContainer extraContainer";
+}
+
+.actionButtons {
+  margin-top: 3px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .username {
@@ -40,6 +54,13 @@
 
 .hideDetails {
   display: none;
+}
+
+.timestamp {
+  text-align: right;
+  font-size: small;
+  color: var(--light-text);
+  padding-right: 3px;
 }
 
 p {

@@ -1,3 +1,18 @@
+:root {
+  --dark-bg: #25566F;
+  --light-bg: #D9EBF2;
+  --mid-bg: #f2f2f2;
+  --dark-text: #0d0d0d;
+  --light-text: #f2f2f2;
+  --green: #5EC980;
+  --red: #BB3E5C;
+  --yellow: #C7C557; 
+}
+
+html {
+  background-color: var(--light-bg);
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -25,15 +25,24 @@ export default class LoginEvent extends Component {
 
   toggleExtra = () => {
     this.setState({ hideDetails: !this.state.hideDetails });
-  }
+  };
 
   render() {
     const collapseClass = classNames({
       extraInfo: true,
       hideDetails: this.state.hideDetails
     });
+    const cacheTime = new Date(this.props.login.cacheTime);
+    const tmp = {
+      day: cacheTime.getDate(),
+      month: cacheTime.getMonth() + 1,
+      year: cacheTime.getFullYear(),
+      time: cacheTime.toTimeString().substring(0, 8)
+    }
+    const timestamp = `${tmp.day}/${tmp.month}/${tmp.year} ${tmp.time}`;
     return (
       <div className="LoginEventCard">
+        <p className="timestamp">{timestamp.toString()}</p>
         <div className="userInfo">
           <p className="username">Username: {this.props.login.username}</p>
           <p className="ip">IP: {this.props.login.ip}</p>
@@ -43,11 +52,17 @@ export default class LoginEvent extends Component {
           <p className="ipBanned">IP Banned: {this.state.ipBan.toString()}</p>
           <div className="extraContainer">
             <div className="toggleDiv">
-              <p>Show details</p>
-              <button name="toggleButton" onClick={this.toggleExtra}>{
-              this.state.hideDetails ? <AiOutlineDownCircle /> : <AiOutlineUpCircle />}</button>
+              <label>Show details</label>
+              <button name="toggleButton" aria-label="Show more Button" onClick={this.toggleExtra}>
+                {this.state.hideDetails ? (
+                  <AiOutlineDownCircle />
+                ) : (
+                  <AiOutlineUpCircle />
+                )}
+              </button>
             </div>
             <div className={collapseClass}>
+              <hr />
               <p className="cores">
                 Cores: {this.props.login.hardwareConcurrency}
               </p>
@@ -59,6 +74,11 @@ export default class LoginEvent extends Component {
               <p className="height">Height: {this.props.login.height}</p>
             </div>
           </div>
+        </div>
+        <div className="actionButtons" >
+          <button className="userBanBtn">Username Ban</button>
+          <button className="ipBanBtn">IP Ban</button>
+          <button className="bigBanBtn">Big Ban</button>
         </div>
       </div>
     );
