@@ -1,5 +1,4 @@
 .LoginEventCard {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   width: 400px;
   box-shadow: 0 0 5px var(--mid-bg);
   background-color: var(--dark-bg);

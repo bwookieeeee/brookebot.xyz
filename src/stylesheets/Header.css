@@ -1,0 +1,11 @@
+.header {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-bg);
+}
+
+h1 {
+  margin: 0;
+  color: var(--light-text);
+  margin-left: 15px;
+}

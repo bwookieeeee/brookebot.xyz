@@ -1,5 +1,6 @@
 import './stylesheets/App.css';
-import LoginEvent from './components/LoginEvent';
+import LoginList from './components/LoginList';
+import Header from "./components/Header"
 
 const testUser = {
   cacheId: "0000-000-0000-00000000000000",
@@ -18,8 +19,8 @@ const testUser = {
 function App() {
   return (
     <div className="App">
-      
-      <LoginEvent login={testUser}/>
+      <Header />
+      <LoginList />
     </div>
   );
 }
